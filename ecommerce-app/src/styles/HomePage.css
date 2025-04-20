@@ -1,0 +1,138 @@
+.home-page {
+  padding-bottom: 40px;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: -20px -20px 30px -20px;
+}
+
+.hero-content {
+  color: #fff;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.shop-now-btn {
+  background-color: #4361ee;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+}
+
+.shop-now-btn:hover {
+  background-color: #3a56d4;
+  transform: translateY(-3px);
+}
+
+/* Featured products section */
+.featured-products {
+  margin-bottom: 50px;
+}
+
+.featured-products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+  position: relative;
+}
+
+.featured-products h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #4361ee;
+  margin: 15px auto 0;
+}
+
+/* Benefits section */
+.benefits-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.benefit {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+}
+
+.benefit .material-icons {
+  font-size: 2.5rem;
+  color: #4361ee;
+  margin-bottom: 15px;
+}
+
+.benefit h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.benefit p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .benefits-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 400px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .benefits-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-section {
+    height: 350px;
+  }
+} 

@@ -1,0 +1,151 @@
+.header {
+  background-color: #232f3e;
+  padding: 15px 0;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu a {
+  color: #fff;
+  font-weight: 400;
+  transition: color 0.3s;
+  padding: 8px 0;
+  position: relative;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #f8f9fa;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #e63946;
+  color: #fff;
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-button span {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.menu-button.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #232f3e;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-menu.active {
+    max-height: 300px;
+  }
+  
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .nav-menu li {
+    margin: 0 0 15px 0;
+  }
+  
+  .nav-menu li:last-child {
+    margin-bottom: 0;
+  }
+} 
